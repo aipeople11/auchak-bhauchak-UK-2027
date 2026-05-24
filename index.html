@@ -3,25 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ग्राउंड जीरो — औचक-भौचक | Uttarakhand 2027 Fact Dossier</title>
+<title>ग्राउंड जीरो — औचक-भौचक | Anurag Muskaan | Uttarakhand 2027 Fact Dossier</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&family=Inter:wght@300;400;600;700;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Inter:wght@300;400;500;600;700;900&display=swap');
 
   :root {
-    --bg: #0a0e1a;
-    --glass: rgba(255,255,255,0.06);
-    --glass-border: rgba(255,255,255,0.12);
-    --studio: #1a2a4a;
-    --ground: #1a3a1a;
+    --bg: #080c18;
+    --glass: rgba(255,255,255,0.055);
+    --glass-border: rgba(255,255,255,0.11);
     --studio-accent: #4a90d9;
     --ground-accent: #27ae60;
     --red: #e74c3c;
     --gold: #f39c12;
+    --gold2: #e8b84b;
     --text: #e8eaf6;
     --muted: #8892a4;
+    --card-radius: 16px;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  * { margin:0; padding:0; box-sizing:border-box; }
 
   body {
     background: var(--bg);
@@ -29,101 +29,199 @@
     font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
     min-height: 100vh;
     background-image:
-      radial-gradient(ellipse at 20% 20%, rgba(42,90,160,0.15) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 80%, rgba(39,174,96,0.10) 0%, transparent 50%);
+      radial-gradient(ellipse at 15% 10%, rgba(42,90,160,0.13) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 90%, rgba(39,174,96,0.09) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 50%, rgba(139,0,0,0.05) 0%, transparent 70%);
   }
 
-  /* HEADER */
+  /* ─── HEADER ───────────────────────────────────── */
   .header {
-    background: linear-gradient(135deg, #0d1f3c 0%, #1a3a5c 100%);
+    background: linear-gradient(135deg, #0b1829 0%, #112240 100%);
     border-bottom: 2px solid var(--gold);
-    padding: 24px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
+    padding: 20px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 14px;
   }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
+  .brand { display: flex; align-items: center; gap: 14px; }
   .brand-logo {
-    width: 56px; height: 56px;
+    width: 52px; height: 52px;
     background: linear-gradient(135deg, #f39c12, #e74c3c);
     border-radius: 12px;
     display: flex; align-items: center; justify-content: center;
-    font-size: 28px;
+    font-size: 26px; flex-shrink: 0;
   }
-
   .brand-text h1 {
-    font-size: 20px; font-weight: 900;
+    font-size: 19px; font-weight: 900;
     background: linear-gradient(90deg, #f39c12, #e74c3c);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     letter-spacing: 1px;
   }
-
-  .brand-text p {
-    font-size: 12px; color: var(--muted);
-    font-family: 'Noto Sans Devanagari', sans-serif;
-  }
-
-  .header-meta {
-    text-align: right;
-    font-size: 12px; color: var(--muted);
-  }
-
+  .brand-text p { font-size: 11.5px; color: var(--muted); }
+  .header-meta { text-align: right; font-size: 12px; color: var(--muted); }
   .header-meta strong { color: var(--gold); display: block; font-size: 14px; }
 
-  /* HERO STRIP */
-  .hero-strip {
-    background: linear-gradient(90deg, #8B0000, #1a2a4a, #0a3d0a);
-    padding: 14px 40px;
-    display: flex; gap: 40px; align-items: center; flex-wrap: wrap;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+  /* ─── JOURNALIST PROFILE ───────────────────────── */
+  .journalist-profile {
+    background: linear-gradient(135deg, #0f1f3a 0%, #1a2e50 60%, #0d2219 100%);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 28px 40px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 28px;
+    align-items: center;
   }
+  .jp-avatar {
+    width: 88px; height: 88px; border-radius: 50%;
+    background: linear-gradient(135deg, #f39c12 0%, #e74c3c 50%, #8b0000 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 38px; flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(243,156,18,0.35), 0 0 24px rgba(243,156,18,0.15);
+  }
+  .jp-info { flex: 1; }
+  .jp-name {
+    font-size: 26px; font-weight: 900; letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #f8d57e, #f39c12, #e74c3c);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 3px;
+  }
+  .jp-title { font-size: 12px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+  .jp-shows { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .jp-show-tag {
+    font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 20px;
+    background: rgba(243,156,18,0.12); color: var(--gold);
+    border: 1px solid rgba(243,156,18,0.3);
+  }
+  .jp-show-tag.red { background: rgba(231,76,60,0.12); color: #f1948a; border-color: rgba(231,76,60,0.3); }
+  .jp-show-tag.green { background: rgba(39,174,96,0.12); color: #6fcf97; border-color: rgba(39,174,96,0.3); }
+  .jp-bio { font-size: 12.5px; color: rgba(232,234,246,0.75); line-height: 1.65; max-width: 640px; }
+  .jp-quote-block {
+    background: rgba(243,156,18,0.06);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    max-width: 260px;
+    flex-shrink: 0;
+  }
+  .jp-quote {
+    font-size: 13px; font-style: italic; line-height: 1.7;
+    color: rgba(232,234,246,0.85);
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    margin-bottom: 8px;
+  }
+  .jp-quote-attr { font-size: 11px; color: var(--gold); font-weight: 600; }
 
+  .jp-timeline { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 12px; }
+  .jp-tl-item {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 10.5px; color: var(--muted);
+  }
+  .jp-tl-item:not(:last-child)::after {
+    content: "→"; margin: 0 8px; color: rgba(255,255,255,0.2); font-size: 11px;
+  }
+  .jp-tl-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+  .jp-tl-dot.red { background: #e74c3c; }
+  .jp-tl-dot.green { background: #27ae60; }
+
+  /* ─── FACTS TICKER ─────────────────────────────── */
+  .ticker-wrap {
+    background: #0d1a2e; border-bottom: 1px solid rgba(255,255,255,0.06);
+    overflow: hidden; white-space: nowrap; padding: 0;
+  }
+  .ticker-label {
+    display: inline-block; background: var(--gold); color: #0a0e1a;
+    font-size: 10px; font-weight: 900; letter-spacing: 1px; padding: 8px 14px;
+    vertical-align: middle;
+  }
+  .ticker-inner {
+    display: inline-block; animation: ticker 50s linear infinite;
+    padding-left: 20px; font-size: 11.5px; color: rgba(232,234,246,0.65);
+    vertical-align: middle;
+  }
+  .ticker-inner span { margin: 0 28px; }
+  .ticker-inner span b { color: var(--gold2); }
+  @keyframes ticker { 0%{ transform: translateX(0) } 100%{ transform: translateX(-50%) } }
+
+  /* ─── HERO STRIP ───────────────────────────────── */
+  .hero-strip {
+    background: linear-gradient(90deg, #3d0000, #0f1a30, #0a1f0a);
+    padding: 14px 40px;
+    display: flex; gap: 0; align-items: stretch; flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
   .stat-pill {
     display: flex; flex-direction: column; align-items: center;
+    padding: 4px 24px; border-right: 1px solid rgba(255,255,255,0.08);
   }
+  .stat-pill:last-child { border-right: none; }
   .stat-pill .num { font-size: 22px; font-weight: 900; color: var(--gold); }
-  .stat-pill .label { font-size: 10px; color: var(--muted); text-align: center; max-width: 100px; }
+  .stat-pill .label { font-size: 10px; color: var(--muted); text-align: center; max-width: 110px; }
 
-  /* MAIN CONTENT */
-  .container { max-width: 1400px; margin: 0 auto; padding: 32px 24px; }
+  /* ─── MAIN CONTENT ─────────────────────────────── */
+  .container { max-width: 1380px; margin: 0 auto; padding: 32px 24px; }
 
   .section-title {
-    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 20px; font-weight: 600;
+    font-size: 12px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 18px; font-weight: 700;
     border-left: 3px solid var(--gold); padding-left: 12px;
+    display: flex; align-items: center; gap: 8px;
   }
 
-  /* DOSSIER CARDS */
-  .dossier-grid {
-    display: flex; flex-direction: column; gap: 20px;
-    margin-bottom: 40px;
+  /* ─── UK FACTS GRID ────────────────────────────── */
+  .uk-facts-section { margin-bottom: 36px; }
+  .uk-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 14px;
   }
+  .uk-fact-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    backdrop-filter: blur(8px);
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .uk-fact-card:hover { transform: translateY(-2px); border-color: rgba(243,156,18,0.3); }
+  .uk-fact-card .fact-icon { font-size: 20px; margin-bottom: 6px; }
+  .uk-fact-card .fact-val {
+    font-size: 16px; font-weight: 800; color: var(--gold);
+    margin-bottom: 2px; line-height: 1.2;
+  }
+  .uk-fact-card .fact-key { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .uk-fact-card .fact-detail { font-size: 11px; color: rgba(232,234,246,0.6); margin-top: 4px; }
 
+  .uk-trivia-strip {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+    gap: 10px;
+  }
+  .trivia-item { display: flex; gap: 10px; align-items: flex-start; }
+  .trivia-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .trivia-text { font-size: 11.5px; color: rgba(232,234,246,0.72); line-height: 1.55; }
+  .trivia-text b { color: var(--gold2); }
+
+  /* ─── DOSSIER CARDS ────────────────────────────── */
+  .dossier-grid { display: flex; flex-direction: column; gap: 18px; margin-bottom: 38px; }
   .dossier-card {
     background: var(--glass);
     border: 1px solid var(--glass-border);
-    border-radius: 16px;
+    border-radius: var(--card-radius);
     overflow: hidden;
     backdrop-filter: blur(12px);
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
-  .dossier-card:hover { transform: translateY(-2px); }
-
+  .dossier-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
   .card-header {
-    background: linear-gradient(90deg, rgba(255,255,255,0.08), transparent);
-    padding: 14px 20px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.075), transparent);
+    padding: 13px 20px;
     display: flex; align-items: center; gap: 12px;
     border-bottom: 1px solid var(--glass-border);
   }
-
   .issue-num {
     width: 32px; height: 32px;
     background: linear-gradient(135deg, var(--gold), #e74c3c);
@@ -132,204 +230,457 @@
     font-weight: 900; font-size: 14px; color: #0a0e1a;
     flex-shrink: 0;
   }
-
-  .card-header h3 { font-size: 15px; font-weight: 700; }
+  .card-header h3 { font-size: 14.5px; font-weight: 700; }
   .card-header .location { font-size: 11px; color: var(--muted); }
-
-  .card-body {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 0;
-  }
-
-  .col-studio, .col-ground {
-    padding: 18px 20px;
-  }
-
-  .col-studio {
-    background: rgba(42,90,160,0.10);
-    border-right: 1px solid var(--glass-border);
-  }
-  .col-ground { background: rgba(39,174,96,0.08); }
-
+  .card-body { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .col-studio { padding: 16px 20px; background: rgba(42,90,160,0.09); border-right: 1px solid var(--glass-border); }
+  .col-ground { padding: 16px 20px; background: rgba(39,174,96,0.07); }
   .col-label {
-    font-size: 10px; letter-spacing: 2px; font-weight: 700;
-    text-transform: uppercase; margin-bottom: 10px;
+    font-size: 9.5px; letter-spacing: 2px; font-weight: 700;
+    text-transform: uppercase; margin-bottom: 9px;
     display: flex; align-items: center; gap: 6px;
   }
   .col-studio .col-label { color: var(--studio-accent); }
   .col-ground .col-label { color: var(--ground-accent); }
-
-  .col-label .dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: currentColor; display: inline-block;
-  }
-
-  .narrative-text {
-    font-size: 13px; line-height: 1.7;
-    font-style: italic; color: rgba(232,234,246,0.8);
-    margin-bottom: 10px;
-  }
-
+  .col-label .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+  .narrative-text { font-size: 12.5px; line-height: 1.68; font-style: italic; color: rgba(232,234,246,0.78); margin-bottom: 10px; }
   .fact-tag {
-    display: inline-block;
-    font-size: 11px; font-weight: 600;
-    padding: 4px 10px; border-radius: 20px;
-    margin: 3px 3px 3px 0;
+    display: inline-block; font-size: 10.5px; font-weight: 600;
+    padding: 3px 9px; border-radius: 20px; margin: 3px 3px 3px 0;
   }
-
-  .fact-studio { background: rgba(42,90,160,0.3); color: #7fb3f5; border: 1px solid rgba(42,90,160,0.5); }
-  .fact-ground { background: rgba(39,174,96,0.25); color: #6fcf97; border: 1px solid rgba(39,174,96,0.4); }
-  .fact-warning { background: rgba(231,76,60,0.25); color: #f1948a; border: 1px solid rgba(231,76,60,0.4); }
-
+  .fact-studio { background: rgba(42,90,160,0.28); color: #7fb3f5; border: 1px solid rgba(42,90,160,0.45); }
+  .fact-ground { background: rgba(39,174,96,0.22); color: #6fcf97; border: 1px solid rgba(39,174,96,0.38); }
+  .fact-warning { background: rgba(231,76,60,0.22); color: #f1948a; border: 1px solid rgba(231,76,60,0.38); }
+  .am-note {
+    font-size: 10.5px; color: var(--gold2); font-style: italic;
+    margin-top: 8px; padding-top: 8px;
+    border-top: 1px dashed rgba(243,156,18,0.2);
+  }
+  .am-note b { font-style: normal; }
   .verdict-strip {
-    padding: 12px 20px;
-    background: rgba(243,156,18,0.08);
-    border-top: 1px solid rgba(243,156,18,0.2);
-    font-size: 12px; color: var(--gold);
+    padding: 11px 20px;
+    background: rgba(243,156,18,0.07);
+    border-top: 1px solid rgba(243,156,18,0.18);
+    font-size: 11.5px; color: var(--gold);
     display: flex; align-items: flex-start; gap: 8px;
   }
-  .verdict-strip .v-icon { font-size: 16px; flex-shrink: 0; }
+  .verdict-strip .v-icon { font-size: 15px; flex-shrink: 0; }
   .verdict-strip strong { color: #f8c47a; }
 
-  /* ELECTION OUTCOME WIDGET */
-  .outcome-section { margin-bottom: 40px; }
-
-  .outcome-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 24px;
-  }
-
+  /* ─── ELECTION OUTCOME ─────────────────────────── */
+  .outcome-section { margin-bottom: 38px; }
+  .outcome-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
   .party-card {
-    background: var(--glass);
-    border: 1px solid var(--glass-border);
-    border-radius: 14px;
-    padding: 20px;
-    backdrop-filter: blur(12px);
+    background: var(--glass); border: 1px solid var(--glass-border);
+    border-radius: 14px; padding: 20px; backdrop-filter: blur(12px);
   }
-
-  .party-name { font-size: 16px; font-weight: 900; margin-bottom: 4px; }
-  .bjp-name { color: #ff6b35; }
-  .inc-name { color: #4a90d9; }
-
-  .seat-range {
-    font-size: 40px; font-weight: 900;
-    background: linear-gradient(90deg, var(--gold), #e74c3c);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  }
-
-  .seat-label { font-size: 11px; color: var(--muted); margin-bottom: 12px; }
-
-  .bar-wrap { background: rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden; height: 8px; margin-bottom: 8px; }
+  .party-name { font-size: 15px; font-weight: 900; margin-bottom: 4px; }
+  .bjp-name { color: #ff6b35; } .inc-name { color: #4a90d9; }
+  .seat-range { font-size: 38px; font-weight: 900; background: linear-gradient(90deg, var(--gold), #e74c3c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .seat-label { font-size: 11px; color: var(--muted); margin-bottom: 10px; }
+  .bar-wrap { background: rgba(255,255,255,0.07); border-radius: 6px; overflow: hidden; height: 7px; margin-bottom: 10px; }
   .bar-fill { height: 100%; border-radius: 6px; }
   .bar-bjp { background: linear-gradient(90deg, #ff6b35, #f39c12); }
   .bar-inc { background: linear-gradient(90deg, #4a90d9, #27ae60); }
-
-  .party-issues { list-style: none; padding: 0; }
-  .party-issues li { font-size: 12px; color: var(--muted); padding: 3px 0; padding-left: 14px; position: relative; }
+  .party-issues { list-style: none; }
+  .party-issues li { font-size: 11.5px; color: var(--muted); padding: 3px 0 3px 14px; position: relative; }
   .party-issues li:before { content: "→"; position: absolute; left: 0; color: var(--gold); }
-
   .majority-line {
-    background: linear-gradient(90deg, #8B0000, #c0392b);
-    border-radius: 12px; padding: 14px 20px;
-    text-align: center; font-size: 14px; font-weight: 700;
-    letter-spacing: 1px;
+    background: linear-gradient(90deg, #6b0000, #b03030);
+    border-radius: 12px; padding: 13px 20px;
+    text-align: center; font-size: 13.5px; font-weight: 700; letter-spacing: 0.5px;
   }
 
-  /* SATIRICAL CLOSING */
+  /* ─── BOOKS SECTION ────────────────────────────── */
+  .books-section { margin-bottom: 38px; }
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+  }
+  .book-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--card-radius);
+    padding: 18px;
+    backdrop-filter: blur(8px);
+    transition: transform 0.2s, border-color 0.2s;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .book-card:hover { transform: translateY(-3px); border-color: rgba(243,156,18,0.35); }
+  .book-spine {
+    width: 42px; height: 58px; border-radius: 4px 8px 8px 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  }
+  .book-header { display: flex; gap: 12px; align-items: flex-start; }
+  .book-meta { flex: 1; }
+  .book-title { font-size: 13px; font-weight: 700; color: var(--text); line-height: 1.4; margin-bottom: 3px; }
+  .book-author { font-size: 11px; color: var(--gold); font-weight: 600; }
+  .book-year { font-size: 10px; color: var(--muted); }
+  .book-cat {
+    display: inline-block; font-size: 9.5px; font-weight: 700;
+    padding: 2px 8px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .cat-uk { background: rgba(42,90,160,0.25); color: #7fb3f5; }
+  .cat-env { background: rgba(39,174,96,0.22); color: #6fcf97; }
+  .cat-pol { background: rgba(243,156,18,0.2); color: var(--gold); }
+  .cat-jour { background: rgba(231,76,60,0.2); color: #f1948a; }
+  .cat-him { background: rgba(156,39,176,0.2); color: #ce93d8; }
+  .book-desc { font-size: 11px; color: rgba(232,234,246,0.6); line-height: 1.6; }
+  .book-relevance {
+    font-size: 10.5px; color: var(--gold2); padding-top: 8px;
+    border-top: 1px dashed rgba(243,156,18,0.2); font-style: italic;
+  }
+  .book-relevance b { font-style: normal; color: var(--gold); }
+
+  /* ─── CLOSING ──────────────────────────────────── */
   .closing-card {
-    background: linear-gradient(135deg, rgba(243,156,18,0.08), rgba(231,76,60,0.05));
-    border: 1px solid rgba(243,156,18,0.25);
-    border-radius: 16px; padding: 28px;
-    text-align: center; margin-bottom: 40px;
+    background: linear-gradient(135deg, rgba(243,156,18,0.07), rgba(231,76,60,0.04));
+    border: 1px solid rgba(243,156,18,0.22);
+    border-radius: var(--card-radius); padding: 28px;
+    text-align: center; margin-bottom: 36px;
   }
-
-  .closing-card .mic { font-size: 36px; margin-bottom: 8px; }
-  .closing-card h2 {
-    font-size: 18px; color: var(--gold); margin-bottom: 16px;
-    font-family: 'Noto Sans Devanagari', sans-serif;
-  }
-
+  .closing-card .mic { font-size: 34px; margin-bottom: 6px; }
+  .closing-card h2 { font-size: 17px; color: var(--gold); margin-bottom: 14px; font-family: 'Noto Sans Devanagari', sans-serif; }
   .poem-lines {
     font-family: 'Noto Sans Devanagari', sans-serif;
-    font-size: 15px; line-height: 2.2; color: rgba(232,234,246,0.9);
-    font-style: italic; max-width: 700px; margin: 0 auto 20px;
+    font-size: 14.5px; line-height: 2.2; color: rgba(232,234,246,0.88);
+    font-style: italic; max-width: 700px; margin: 0 auto 18px;
   }
-
   .poem-lines span { color: var(--gold); font-style: normal; font-weight: 700; }
-
-  .sign-off {
-    font-size: 13px; color: var(--muted); margin-top: 16px;
-    font-family: 'Noto Sans Devanagari', sans-serif;
-  }
-
+  .sign-off { font-size: 12.5px; color: var(--muted); margin-top: 14px; font-family: 'Noto Sans Devanagari', sans-serif; }
   .sign-off strong { color: var(--gold); }
 
-  /* FOOTER */
+  /* ─── FOOTER ───────────────────────────────────── */
   .footer {
     text-align: center; padding: 20px;
     font-size: 11px; color: var(--muted);
     border-top: 1px solid var(--glass-border);
+    line-height: 1.8;
+  }
+  .footer a { color: var(--gold); text-decoration: none; }
+
+  /* ─── RESPONSIVE ───────────────────────────────── */
+
+  /* Prevent ALL horizontal overflow globally */
+  html, body { overflow-x: hidden; max-width: 100%; }
+
+  /* ── Tablet (≤ 900px) ── */
+  @media (max-width: 900px) {
+    .journalist-profile { grid-template-columns: auto 1fr; gap: 18px; }
+    .jp-quote-block { display: none; }
+    .jp-timeline { flex-wrap: wrap; gap: 6px; }
+    .jp-tl-item:not(:last-child)::after { display: none; }
+    .uk-facts-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+    .books-grid { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
   }
 
+  /* ── Mobile (≤ 768px) ── */
   @media (max-width: 768px) {
+    /* Header stacks vertically */
+    .header { padding: 12px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+    .header-meta { text-align: left; }
+    .brand-text h1 { font-size: 15px; letter-spacing: 0; }
+    .brand-text p  { font-size: 10px; }
+    .brand-logo    { width: 42px; height: 42px; font-size: 20px; }
+
+    /* Journalist profile: avatar + info only (quote hidden) */
+    .journalist-profile { grid-template-columns: auto 1fr; padding: 16px; gap: 12px; }
+    .jp-avatar  { width: 60px; height: 60px; font-size: 26px; }
+    .jp-name    { font-size: 18px; }
+    .jp-title   { font-size: 10px; letter-spacing: 1px; }
+    .jp-bio     { font-size: 11px; }
+    .jp-show-tag { font-size: 10px; padding: 3px 8px; }
+
+    /* Ticker */
+    .ticker-label  { font-size: 9px; padding: 7px 10px; }
+    .ticker-inner  { font-size: 10px; }
+
+    /* Hero strip → 3-column grid so stats never bleed off-screen */
+    .hero-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 10px 16px;
+      gap: 0;
+    }
+    .stat-pill {
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 8px 4px;
+    }
+    .stat-pill .num   { font-size: 16px; }
+    .stat-pill .label { font-size: 9px; max-width: 100%; }
+
+    /* Container */
+    .container { padding: 16px 12px; }
+
+    /* Section titles — tighten letter-spacing to stop overflow */
+    .section-title { font-size: 10.5px; letter-spacing: 1.5px; }
+
+    /* UK Facts grid: 2 columns */
+    .uk-facts-grid  { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .uk-fact-card   { padding: 11px 12px; }
+    .uk-fact-card .fact-val  { font-size: 13px; }
+    .uk-fact-card .fact-icon { font-size: 16px; }
+    .uk-trivia-strip { grid-template-columns: 1fr; gap: 10px; padding: 14px 12px; }
+
+    /* Dossier cards: stack cols vertically */
     .card-body { grid-template-columns: 1fr; }
+    .col-studio { border-right: none; border-bottom: 1px solid var(--glass-border); }
+    .card-header h3      { font-size: 13px; }
+    .card-header .location { font-size: 10px; }
+    .narrative-text { font-size: 11.5px; }
+    .fact-tag { font-size: 10px; padding: 3px 7px; }
+
+    /* Election outcome: single column */
     .outcome-grid { grid-template-columns: 1fr; }
-    .hero-strip { gap: 20px; }
-    .header { padding: 16px 20px; }
-    .container { padding: 20px 16px; }
+    .seat-range   { font-size: 30px; }
+    .majority-line { font-size: 11.5px; padding: 11px 14px; }
+
+    /* Books: single column */
+    .books-grid { grid-template-columns: 1fr; }
+    .book-card  { padding: 14px; }
+    .book-title { font-size: 12px; }
+
+    /* Closing poem */
+    .poem-lines  { font-size: 13px; line-height: 2; }
+    .closing-card { padding: 20px 14px; }
+
+    /* Footer */
+    .footer { font-size: 10px; padding: 14px 12px; }
+  }
+
+  /* ── Small phones (≤ 420px) ── */
+  @media (max-width: 420px) {
+    .brand-text h1 { font-size: 13px; }
+    .jp-name   { font-size: 15px; }
+    .jp-avatar { width: 48px; height: 48px; font-size: 20px; }
+    .jp-bio    { display: none; } /* hide long bio on tiny screens */
+
+    /* Stats: 2 columns on tiny phones */
+    .hero-strip { grid-template-columns: repeat(2, 1fr); }
+
+    /* Facts: single column on tiny phones */
+    .uk-facts-grid { grid-template-columns: 1fr; }
+
+    .section-title  { font-size: 9.5px; letter-spacing: 1px; }
+    .col-studio, .col-ground { padding: 12px 12px; }
+    .verdict-strip  { padding: 10px 12px; font-size: 10.5px; }
+    .seat-range     { font-size: 24px; }
+    .poem-lines     { font-size: 12px; }
+    .sign-off       { font-size: 11px; }
+    .am-note        { font-size: 10px; }
   }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- ═══ HEADER ════════════════════════════════════════ -->
 <div class="header">
   <div class="brand">
     <div class="brand-logo">🎙</div>
     <div class="brand-text">
       <h1>GROUND ZERO SE — AUCHAK BHAUCHAK</h1>
-      <p>ग्राउंड जीरो से औचक-भौचक | The CarNama Election Series</p>
+      <p>ग्राउंड जीरो से औचक-भौचक  |  The CarNama Election Series  |  Anurag Muskaan</p>
     </div>
   </div>
   <div class="header-meta">
-    <strong>UTTARAKHAND 2027</strong>
+    <strong>UTTARAKHAND 2027 ELECTIONS</strong>
     Studio Narrative vs. Ground Reality<br>
-    Fact Dossier | Independent Digital Journalism
+    Independent Digital Journalism Fact Dossier
   </div>
 </div>
 
-<!-- HERO STATS -->
+<!-- ═══ JOURNALIST PROFILE ════════════════════════════ -->
+<div class="journalist-profile">
+  <div class="jp-avatar">👤</div>
+
+  <div class="jp-info">
+    <div class="jp-name">Anurag Muskaan</div>
+    <div class="jp-title">Independent Journalist · Digital Anchor · Satirist · Ground Reporter</div>
+
+    <div class="jp-shows">
+      <span class="jp-show-tag">🎙 Ground Zero se Auchak Bhauchak</span>
+      <span class="jp-show-tag red">🚗 The CarNama</span>
+      <span class="jp-show-tag green">🐒 Chautha Bandar (Satirical Poetry)</span>
+      <span class="jp-show-tag" style="background:rgba(156,39,176,0.12);color:#ce93d8;border-color:rgba(156,39,176,0.3);">📺 Ex-Zee News (Taal Thok Ke)</span>
+    </div>
+
+    <div class="jp-bio">
+      After departing Zee News in April 2026, <strong style="color:var(--gold)">Anurag Muskaan</strong> made one of Indian digital journalism's sharpest pivots — from prime-time studio debates to raw, unfiltered ground reporting. His flagship YouTube series <em>"Ground Zero se Auchak Bhauchak"</em> built an audience by doing what AC-studio journalism refuses to: walking into empty Howrah lanes, sitting with cut-money victims in Bengal, and now heading to the ghost villages of the Himalayas. His on-the-road show <em>"The CarNama"</em> and satirical Hindi poetry under <em>"Chautha Bandar"</em> have made him one of independent digital media's most distinctive voices in 2026.
+    </div>
+
+    <div class="jp-timeline">
+      <div class="jp-tl-item"><span class="jp-tl-dot"></span> Zee News — Taal Thok Ke (Prime Time)</div>
+      <div class="jp-tl-item"><span class="jp-tl-dot red"></span> Departed Zee News (April 2026)</div>
+      <div class="jp-tl-item"><span class="jp-tl-dot green"></span> Launched YouTube Channel</div>
+      <div class="jp-tl-item"><span class="jp-tl-dot"></span> Bengal Ground Series (Howrah, Kolkata)</div>
+      <div class="jp-tl-item"><span class="jp-tl-dot green"></span> Now → Uttarakhand 2027 Coverage</div>
+    </div>
+  </div>
+
+  <div class="jp-quote-block">
+    <div class="jp-quote">
+      "जो दिखता है वो सच नहीं होता, और जो सच होता है वो दिखाया नहीं जाता। इसीलिए मैं ग्राउंड जीरो पर हूँ।"
+    </div>
+    <div class="jp-quote-attr">— Anurag Muskaan<br><span style="font-size:10px;color:var(--muted);font-weight:400;">Ground Zero se Auchak Bhauchak</span></div>
+  </div>
+</div>
+
+<!-- ═══ TICKER ═════════════════════════════════════════ -->
+<div class="ticker-wrap">
+  <span class="ticker-label">⚡ LIVE FACTS</span>
+  <span class="ticker-inner">
+    <span>🏔️ Uttarakhand formed on <b>9 November 2000</b> as India's 27th state</span>
+    <span>🏛️ Winter Capital: <b>Dehradun</b> | Summer Capital: <b>Gairsain (Bhararisain)</b></span>
+    <span>👥 Population: <b>~1.1 crore</b> | Area: <b>53,483 sq km</b></span>
+    <span>🗳️ Assembly seats: <b>70</b> | Lok Sabha seats: <b>5</b> | Rajya Sabha: <b>3</b></span>
+    <span>🏚️ <b>1,787</b> villages officially abandoned — Palayan Aayog report</span>
+    <span>🌲 Forests cover <b>71%</b> of Uttarakhand's total area</span>
+    <span>🙏 Char Dham (<b>Yamunotri, Gangotri, Kedarnath, Badrinath</b>) — all in Uttarakhand</span>
+    <span>⛰️ Home to <b>Nanda Devi</b> (7,816m) — India's 2nd highest peak</span>
+    <span>📉 <b>40 lakh+</b> people have emigrated since 2011 — 40% of state population</span>
+    <span>💧 Origin of <b>Ganga, Yamuna, Alaknanda, Bhagirathi</b> rivers</span>
+    <span>🌿 Chipko Movement born here in <b>1973</b> — Sunderlal Bahuguna, Gaura Devi</span>
+    <span>🐯 Jim Corbett National Park — India's <b>oldest national park (1936)</b></span>
+    <span>📚 Literacy rate: <b>78.8%</b> | Higher than national average of 74%</span>
+    <span>🗺️ Borders: <b>China (Tibet)</b> to the north, <b>Nepal</b> to the east</span>
+    <span>🏔️ Uttarakhand formed on <b>9 November 2000</b> as India's 27th state</span>
+    <span>🏛️ Winter Capital: <b>Dehradun</b> | Summer Capital: <b>Gairsain (Bhararisain)</b></span>
+    <span>👥 Population: <b>~1.1 crore</b> | Area: <b>53,483 sq km</b></span>
+    <span>🗳️ Assembly seats: <b>70</b> | Lok Sabha seats: <b>5</b> | Rajya Sabha: <b>3</b></span>
+    <span>🏚️ <b>1,787</b> villages officially abandoned — Palayan Aayog report</span>
+    <span>🌲 Forests cover <b>71%</b> of Uttarakhand's total area</span>
+    <span>🙏 Char Dham (<b>Yamunotri, Gangotri, Kedarnath, Badrinath</b>) — all in Uttarakhand</span>
+    <span>⛰️ Home to <b>Nanda Devi</b> (7,816m) — India's 2nd highest peak</span>
+  </span>
+</div>
+
+<!-- ═══ HERO STATS ══════════════════════════════════════ -->
 <div class="hero-strip">
-  <div class="stat-pill">
-    <div class="num">70</div>
-    <div class="label">Assembly Seats (Feb 2027)</div>
-  </div>
-  <div class="stat-pill">
-    <div class="num">1,787</div>
-    <div class="label">Ghost / Abandoned Villages</div>
-  </div>
-  <div class="stat-pill">
-    <div class="num">40L+</div>
-    <div class="label">People Left Since 2011</div>
-  </div>
-  <div class="stat-pill">
-    <div class="num">56K+</div>
-    <div class="label">Trees Felled for Char Dham Roads</div>
-  </div>
-  <div class="stat-pill">
-    <div class="num">208</div>
-    <div class="label">Forest Fire Sites in 2026</div>
-  </div>
-  <div class="stat-pill">
-    <div class="num">250m²</div>
-    <div class="label">Bhu Kanoon Outsider Land Cap (2025)</div>
-  </div>
+  <div class="stat-pill"><div class="num">70</div><div class="label">Assembly Seats (Feb 2027)</div></div>
+  <div class="stat-pill"><div class="num">1,787</div><div class="label">Ghost / Abandoned Villages</div></div>
+  <div class="stat-pill"><div class="num">40L+</div><div class="label">People Left Since 2011</div></div>
+  <div class="stat-pill"><div class="num">56K+</div><div class="label">Trees Felled for Char Dham Roads</div></div>
+  <div class="stat-pill"><div class="num">208</div><div class="label">Forest Fire Sites in 2026</div></div>
+  <div class="stat-pill"><div class="num">250m²</div><div class="label">Bhu Kanoon Outsider Land Cap (2025)</div></div>
+  <div class="stat-pill"><div class="num">₹400</div><div class="label">Pahadi Porter Daily Wage (Char Dham)</div></div>
 </div>
 
-<!-- MAIN CONTENT -->
+<!-- ═══ MAIN CONTENT ════════════════════════════════════ -->
 <div class="container">
 
+  <!-- ─── UTTARAKHAND AT A GLANCE ─── -->
+  <div class="uk-facts-section">
+    <div class="section-title">🏔️ Uttarakhand at a Glance — What Anurag Muskaan is Walking Into</div>
+
+    <div class="uk-facts-grid">
+      <div class="uk-fact-card">
+        <div class="fact-icon">🗓️</div>
+        <div class="fact-val">9 Nov 2000</div>
+        <div class="fact-key">State Formation</div>
+        <div class="fact-detail">Carved from Uttar Pradesh as India's 27th state. Formerly called Uttaranchal until 2007.</div>
+      </div>
+      <div class="uk-fact-card">
+        <div class="fact-icon">🏛️</div>
+        <div class="fact-val">Dehradun / Gairsain</div>
+        <div class="fact-key">Dual Capitals</div>
+        <div class="fact-detail">Dehradun (winter) & Gairsain / Bhararisain (summer). The dual capital debate itself is political.</div>
+      </div>
+      <div class="uk-fact-card">
+        <div class="fact-icon">👥</div>
+        <div class="fact-val">~1.1 Crore</div>
+        <div class="fact-key">Population</div>
+        <div class="fact-detail">One of India's smaller states by population. 70% lives in rural areas — heavily impacted by palayan.</div>
+      </div>
+      <div class="uk-fact-card">
+        <div class="fact-icon">📐</div>
+        <div class="fact-val">53,483 km²</div>
+        <div class="fact-key">Area</div>
+        <div class="fact-detail">93% of area is mountainous. Only 13 districts — 11 hill, 2 plain (Haridwar, USN).</div>
+      </div>
+      <div class="uk-fact-card">
+        <div class="fact-icon">🌲</div>
+        <div class="fact-val">71%</div>
+        <div class="fact-key">Forest Cover</div>
+        <div class="fact-detail">Among India's most forested states. Yet pine monoculture has replaced oak forests, worsening fires.</div>
+      </div>
+      <div class="uk-fact-card">
+        <div class="fact-icon">⛰️</div>
+        <div class="fact-val">7,816 m</div>
+        <div class="fact-key">Nanda Devi Peak</div>
+        <div class="fact-detail">India's 2nd highest peak, entirely in Uttarakhand. A UNESCO World Heritage Site since 1988.</div>
+      </div>
+      <div class="uk-fact-card">
+        <div class="fact-icon">💧</div>
+        <div class="fact-val">4 Rivers</div>
+        <div class="fact-key">Sacred River Origins</div>
+        <div class="fact-detail">Ganga, Yamuna, Alaknanda, Bhagirathi all originate here. Called "Devbhoomi" — Land of Gods.</div>
+      </div>
+      <div class="uk-fact-card">
+        <div class="fact-icon">🗳️</div>
+        <div class="fact-val">70 Seats</div>
+        <div class="fact-key">Assembly (Vidhan Sabha)</div>
+        <div class="fact-detail">5 Lok Sabha + 3 Rajya Sabha seats. BJP won 47/70 in 2022. Majority mark = 36.</div>
+      </div>
+      <div class="uk-fact-card">
+        <div class="fact-icon">📚</div>
+        <div class="fact-val">78.8%</div>
+        <div class="fact-key">Literacy Rate</div>
+        <div class="fact-detail">Above the national average of 74%. Women's literacy at 70.7%. Education paradox: literate but unemployed.</div>
+      </div>
+      <div class="uk-fact-card">
+        <div class="fact-icon">🪖</div>
+        <div class="fact-val">Highest</div>
+        <div class="fact-key">Per-Capita Army Personnel</div>
+        <div class="fact-detail">Uttarakhand has one of India's highest soldier-to-civilian ratios. Army is the state's de facto employment agency.</div>
+      </div>
+      <div class="uk-fact-card">
+        <div class="fact-icon">🌿</div>
+        <div class="fact-val">1973</div>
+        <div class="fact-key">Chipko Movement Born</div>
+        <div class="fact-detail">Women of Chamoli hugged trees to stop commercial felling. Sunderlal Bahuguna's life work. Uttarakhand has a deep ecological consciousness — yet policy ignores it.</div>
+      </div>
+      <div class="uk-fact-card">
+        <div class="fact-icon">🐯</div>
+        <div class="fact-val">1936</div>
+        <div class="fact-key">Jim Corbett NP Founded</div>
+        <div class="fact-detail">India's oldest national park. Houses 200+ tigers. Eco-tourism gold mine — but benefits barely reach local communities.</div>
+      </div>
+    </div>
+
+    <div class="uk-trivia-strip">
+      <div class="trivia-item">
+        <span class="trivia-icon">🏔️</span>
+        <div class="trivia-text"><b>Valley of Flowers</b> — a UNESCO World Heritage site in Chamoli, Uttarakhand. The same district where Joshimath is sinking. Nature's beauty and state's negligence coexist within kilometers.</div>
+      </div>
+      <div class="trivia-item">
+        <span class="trivia-icon">🏗️</span>
+        <div class="trivia-text"><b>NTPC & Hydro Projects</b> — Uttarakhand has 100+ hydro projects under various stages. Geologists have warned since 2003 that Joshimath sits on ancient landslide debris. Nobody listened.</div>
+      </div>
+      <div class="trivia-item">
+        <span class="trivia-icon">🗺️</span>
+        <div class="trivia-text"><b>Strategic Border State</b> — Uttarakhand shares a border with <b>China (Tibet)</b> to the north and <b>Nepal</b> to the east. Every road built here is also strategic infrastructure — which partly explains central govt interest in Char Dham highway.</div>
+      </div>
+      <div class="trivia-item">
+        <span class="trivia-icon">🌾</span>
+        <div class="trivia-text"><b>Traditional Crops Under Threat</b> — Mandua (finger millet), Jhangora (barnyard millet), and Gahat dal are Uttarakhand's native crops. As migration hollows villages, these biodiversity-rich crops are disappearing with the farmers who grew them.</div>
+      </div>
+      <div class="trivia-item">
+        <span class="trivia-icon">🎭</span>
+        <div class="trivia-text"><b>Cultural Heritage</b> — Garhwali and Kumaoni are distinct languages (not just dialects), each with rich oral poetry traditions. The pahadi folk form <em>Jagar</em> is an ancient oral epic tradition. Endangered by migration and neglect.</div>
+      </div>
+      <div class="trivia-item">
+        <span class="trivia-icon">💡</span>
+        <div class="trivia-text"><b>Aanurag's Reporter Angle:</b> <b>Every major election issue in Uttarakhand is ultimately about one question — क्या पहाड़ी का पहाड़ पर हक है?</b> (Does the hill person have a right over their own hill?) Land, jobs, forests, rivers — all connect to this single thread.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── 7 ISSUE CARDS ─── -->
   <div class="section-title">⚡ Studio Media vs. Ground Reality — 7 Key Issue Face-Off</div>
 
   <div class="dossier-grid">
@@ -357,11 +708,12 @@
           <span class="fact-tag fact-warning">1,787 Ghost Villages</span>
           <span class="fact-tag fact-warning">40 Lakh Migrated</span>
           <span class="fact-tag fact-warning">Zero Actual Returnees</span>
+          <div class="am-note">📸 <b>Anurag's shot:</b> "Locked wooden doors. A swing rusting in an empty courtyard. The most powerful image of palayan needs no words — just a camera that's willing to climb."</div>
         </div>
       </div>
       <div class="verdict-strip">
         <span class="v-icon">🎯</span>
-        <span><strong>Election Verdict:</strong> Emotional issue that crosses party lines. BJP's 3rd-term weakness. Congress must offer concrete incentive packages — not just rhetoric — to capitalize. Key seats: Lansdowne, Pauri, Srinagar (Garhwal).</span>
+        <span><strong>Election Verdict:</strong> Emotional issue that crosses party lines. BJP's 3rd-term weakness. Congress must offer concrete incentive packages — not just rhetoric. Key seats: Lansdowne, Pauri, Srinagar (Garhwal).</span>
       </div>
     </div>
 
@@ -384,10 +736,11 @@
         </div>
         <div class="col-ground">
           <div class="col-label"><span class="dot"></span> Ground Reality</div>
-          <div class="narrative-text">"600 hectares of forest cleared. 56,000+ trees felled. Displaced families still in makeshift camps with no permanent rehab. Not a single official report on the cause of subsidence was made public. NTPC tunneling continues."</div>
+          <div class="narrative-text">"600 hectares of forest cleared. 56,000+ trees felled. Displaced families still in makeshift camps. No permanent rehab. Not a single official report on subsidence was made public. NTPC tunneling continues."</div>
           <span class="fact-tag fact-warning">No Permanent Rehab Plan</span>
           <span class="fact-tag fact-warning">600 Hectares Forest Cleared</span>
           <span class="fact-tag fact-warning">Report Suppressed</span>
+          <div class="am-note">📸 <b>Anurag's shot:</b> "Red-painted cracks on house walls. A tarpaulin over a temple roof. The sound of NTPC boring machines audible in the background. Ask the government: where is the survey report?"</div>
         </div>
       </div>
       <div class="verdict-strip">
@@ -415,15 +768,16 @@
         </div>
         <div class="col-ground">
           <div class="col-label"><span class="dot"></span> Ground Reality</div>
-          <div class="narrative-text">"Haridwar and Udham Singh Nagar — the most commercially active districts — were deliberately EXCLUDED from the hill district protections. Benami deals continue. Enforcement mechanisms are weak."</div>
+          <div class="narrative-text">"Haridwar and Udham Singh Nagar — the most commercially active districts — were deliberately EXCLUDED. Benami deals continue. Enforcement mechanisms are weak."</div>
           <span class="fact-tag fact-warning">Haridwar / USN Excluded</span>
           <span class="fact-tag fact-warning">Benami Deals Continue</span>
           <span class="fact-tag fact-ground">Outsiders Restricted in 11/13 Hill Districts</span>
+          <div class="am-note">📸 <b>Anurag's vox-pop:</b> "Farmer in Haridwar: 'Kanoon toh bana — par meri zameen abhi bhi bik rahi hai. NOC kaun deta hai? DM office mein koi sunta hi nahi.'"</div>
         </div>
       </div>
       <div class="verdict-strip">
         <span class="v-icon">🎯</span>
-        <span><strong>Election Verdict:</strong> BJP's electoral sop that backfired in plain districts. Congress can attack the exemptions. Sensitive for Thakur and Brahmin hill voters who see land loss as cultural annihilation. Watch Kotdwar, Nainital, Haldwani seats.</span>
+        <span><strong>Election Verdict:</strong> BJP's electoral sop that backfired in plain districts. Sensitive for Thakur and Brahmin hill voters who see land loss as cultural annihilation. Watch Kotdwar, Nainital, Haldwani seats.</span>
       </div>
     </div>
 
@@ -445,10 +799,11 @@
         </div>
         <div class="col-ground">
           <div class="col-label"><span class="dot"></span> Ground Reality</div>
-          <div class="narrative-text">"Multiple UKPSC (Uttarakhand Public Service Commission) paper leaks between 2023–2025. Perpetrators still walking free. Government jobs — the only reason youth stay — are being sabotaged. First-time voters are furious."</div>
+          <div class="narrative-text">"Multiple UKPSC paper leaks between 2023–2025. Perpetrators still walking free. Government jobs — the only reason youth stay — are being sabotaged. First-time voters are furious."</div>
           <span class="fact-tag fact-warning">UKPSC Paper Leaks Unresolved</span>
           <span class="fact-tag fact-warning">No Perpetrators Jailed</span>
           <span class="fact-tag fact-warning">Youth Brain Drain Accelerating</span>
+          <div class="am-note">📸 <b>Anurag's CarNama hook:</b> "नौकरी के लिए पर्चा भरो, पर्चा लीक हो — तुम मैदान जाओ, नेताजी मैदान मारो!" — Shot on phone, driving through Almora, no crew needed.</div>
         </div>
       </div>
       <div class="verdict-strip">
@@ -479,11 +834,12 @@
           <span class="fact-tag fact-warning">70% Revenue to Outsiders</span>
           <span class="fact-tag fact-warning">Pahadi Porters: ₹400/day</span>
           <span class="fact-tag fact-warning">Ecological Damage Unaddressed</span>
+          <div class="am-note">📸 <b>Anurag's framing:</b> "रिकॉर्ड यात्रा, रिकॉर्ड जाम — पहाड़ी की झोली में बस धुआँ और धूल। The question isn't whether Char Dham is a success. The question is: <em>success for whom?</em>"</div>
         </div>
       </div>
       <div class="verdict-strip">
         <span class="v-icon">🎯</span>
-        <span><strong>Election Verdict:</strong> BJP's STRONGEST card — cannot be countered frontally by Congress. Anurag's framing: "Vikas kiska?" (Whose development?) — reframe rather than oppose. Key for Kedarnath, Badrinath, Rishikesh seats.</span>
+        <span><strong>Election Verdict:</strong> BJP's STRONGEST card. Anurag's framing: <strong>"Vikas kiska?"</strong> — reframe rather than oppose. Key for Kedarnath, Badrinath, Rishikesh seats.</span>
       </div>
     </div>
 
@@ -509,11 +865,12 @@
           <span class="fact-tag fact-warning">208 Active Fire Sites (2026)</span>
           <span class="fact-tag fact-warning">144 Hectares Scorched</span>
           <span class="fact-tag fact-warning">Forest Budget Underfunded</span>
+          <div class="am-note">📸 <b>Anurag's opener:</b> "देवभूमि के जंगल जल रहे हैं — [camera pans to smoke] — और दिल्ली में बैठे हाकिम चैन से सोते हैं।" Opens every Uttarakhand segment. No graphics needed.</div>
         </div>
       </div>
       <div class="verdict-strip">
         <span class="v-icon">🎯</span>
-        <span><strong>Election Verdict:</strong> Poetic and emotional issue for Anurag's coverage. Links environmental neglect to political indifference. Resonates with Tehri, Nainital, Dehradun Cantonment voters who witness the fires firsthand.</span>
+        <span><strong>Election Verdict:</strong> Poetic and emotional. Links environmental neglect to political indifference. Resonates with Tehri, Nainital, Dehradun Cantonment voters who witness the fires firsthand.</span>
       </div>
     </div>
 
@@ -540,20 +897,20 @@
           <span class="fact-tag fact-ground">Anti-Incumbency Transcends Caste</span>
           <span class="fact-tag fact-warning">Congress Has No CM Face</span>
           <span class="fact-tag fact-warning">Swing of 8–12 Seats Possible</span>
+          <div class="am-note">📸 <b>Anurag's thesis:</b> "Studio media sells caste math. Ground zero sells broken trust. Jab tak dard jaat se bada hota hai, tab tak caste math fail hoti hai." — The CarNama, Episode TBD.</div>
         </div>
       </div>
       <div class="verdict-strip">
         <span class="v-icon">🎯</span>
-        <span><strong>Election Verdict:</strong> Anurag's core thesis: "Studio media sells caste math. Ground zero sells broken trust." Congress biggest gap = No strong CM candidate. BJP's biggest risk = 3rd-term fatigue. <strong>Predicted: BJP 36–42 | Congress+ 26–32</strong></span>
+        <span><strong>Election Verdict:</strong> Anurag's core thesis: <strong>"Studio media sells caste math. Ground zero sells broken trust."</strong> Congress biggest gap = No strong CM candidate. BJP's biggest risk = 3rd-term fatigue. <strong>Predicted: BJP 36–42 | Congress+ 26–32</strong></span>
       </div>
     </div>
 
   </div>
 
-  <!-- ELECTION OUTCOME -->
+  <!-- ─── ELECTION OUTCOME ─── -->
   <div class="outcome-section">
     <div class="section-title">🗳️ Election Outcome Prediction — Ground Analysis</div>
-
     <div class="outcome-grid">
       <div class="party-card">
         <div class="party-name bjp-name">BJP (NDA)</div>
@@ -568,7 +925,6 @@
           <li>Paper leak scandals unresolved — youth anger</li>
         </ul>
       </div>
-
       <div class="party-card">
         <div class="party-name inc-name">Congress + Opposition</div>
         <div class="seat-range">26–32</div>
@@ -583,23 +939,145 @@
         </ul>
       </div>
     </div>
-
     <div class="majority-line">
       ⚖️ HUNG ASSEMBLY WATCH: If Congress fields strong CM face + captures youth anger → Hung possible. Otherwise → BJP thin majority.
     </div>
   </div>
 
-  <!-- SATIRICAL CLOSING -->
+  <!-- ─── BOOKS / FIELD LIBRARY ─── -->
+  <div class="books-section">
+    <div class="section-title">📚 Anurag Muskaan's Field Library — Must-Reads for Uttarakhand Coverage</div>
+
+    <div class="books-grid">
+
+      <div class="book-card">
+        <div class="book-header">
+          <div class="book-spine" style="background: linear-gradient(135deg,#1a4a2a,#2e7d52);">📖</div>
+          <div class="book-meta">
+            <span class="book-cat cat-env">Environment</span>
+            <div class="book-title">Chipko Movement: India's Civilisational Response to the Forest Crisis</div>
+            <div class="book-author">Sunderlal Bahuguna</div>
+            <div class="book-year">1973 onwards — essays &amp; speeches</div>
+          </div>
+        </div>
+        <div class="book-desc">The foundational text of Himalayan environmentalism. Bahuguna's writings on why forests are not just timber but the lifeblood of pahadi civilisation. Essential to understand the Chipko legacy that BJP now ignores.</div>
+        <div class="book-relevance"><b>Why Anurag needs this:</b> Every forest fire shot needs historical context. Chipko was Uttarakhand's ground-zero moment — the OG Auchak Bhauchak.</div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-header">
+          <div class="book-spine" style="background: linear-gradient(135deg,#4a1a1a,#8b3030);">📖</div>
+          <div class="book-meta">
+            <span class="book-cat cat-uk">Uttarakhand</span>
+            <div class="book-title">Parvat, Paryavaran aur Palayan</div>
+            <div class="book-author">Shekhar Pathak</div>
+            <div class="book-year">2014</div>
+          </div>
+        </div>
+        <div class="book-desc">Historian Shekhar Pathak's landmark work on how mountains, ecology, and out-migration are interlinked in Uttarakhand. Written by someone who walked every ghost village — this is Anurag's intellectual backbone for the palayan series.</div>
+        <div class="book-relevance"><b>Why Anurag needs this:</b> Statistical and emotional depth for the palayan episodes. Ghost villages have a 200-year history here — not just a modern crisis.</div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-header">
+          <div class="book-spine" style="background: linear-gradient(135deg,#1a2a4a,#2c4a8c);">📖</div>
+          <div class="book-meta">
+            <span class="book-cat cat-pol">Politics</span>
+            <div class="book-title">The Descent of Air India</div>
+            <div class="book-author">Jitender Bhargava</div>
+            <div class="book-year">2013</div>
+          </div>
+        </div>
+        <div class="book-desc">A case study in how government institutions collapse under political interference — directly applicable to Uttarakhand's UKPSC paper leak scandal. Shows the systemic rot that Anurag is reporting on.</div>
+        <div class="book-relevance"><b>Why Anurag needs this:</b> Framework for explaining institutional sabotage to a YouTube audience without jargon.</div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-header">
+          <div class="book-spine" style="background: linear-gradient(135deg,#2a1a4a,#5c3a8c);">📖</div>
+          <div class="book-meta">
+            <span class="book-cat cat-him">Himalaya</span>
+            <div class="book-title">The Living Mountain (Himalaya)</div>
+            <div class="book-author">Ruskin Bond</div>
+            <div class="book-year">Multiple essays, 1960s–2020s</div>
+          </div>
+        </div>
+        <div class="book-desc">Bond has lived in the Mussoorie hills for over 60 years. His essays on the Himalayan seasons, forests, and the slow disappearance of pahadi culture are both beautiful and alarming — the quiet opposite of Anurag's loud journalism, but the same truth.</div>
+        <div class="book-relevance"><b>Why Anurag needs this:</b> For the closing poem shots — Bond's imagery of a burning hill forest or an empty village is unmatched atmospheric journalism.</div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-header">
+          <div class="book-spine" style="background: linear-gradient(135deg,#1a3a1a,#2e6b2e);">📖</div>
+          <div class="book-meta">
+            <span class="book-cat cat-env">Environment</span>
+            <div class="book-title">Joshimath: A Disaster Waiting to Happen</div>
+            <div class="book-author">MC Mehta &amp; Various Geologists</div>
+            <div class="book-year">Reports &amp; Legal Filings 2003–2023</div>
+          </div>
+        </div>
+        <div class="book-desc">Environmental lawyer MC Mehta's Supreme Court filings from 2003 warned that Joshimath would sink. The court ordered a study. The study was done. The warnings were ignored. This paper trail is the most damning accountability document in Uttarakhand.</div>
+        <div class="book-relevance"><b>Why Anurag needs this:</b> When standing in front of cracked houses — "Yeh 2023 mein nahi hua. Yeh 2003 se likh raha tha. Suno."</div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-header">
+          <div class="book-spine" style="background: linear-gradient(135deg,#3a2a1a,#8c6030);">📖</div>
+          <div class="book-meta">
+            <span class="book-cat cat-jour">Journalism</span>
+            <div class="book-title">Everybody Loves a Good Drought</div>
+            <div class="book-author">P. Sainath</div>
+            <div class="book-year">1996</div>
+          </div>
+        </div>
+        <div class="book-desc">P. Sainath's masterpiece on rural India's invisible crises — the journalism Anurag is attempting to replicate in the digital age. Sainath walked into drought-affected India the way Anurag drives into ghost villages. The spiritual predecessor to Auchak Bhauchak.</div>
+        <div class="book-relevance"><b>Why Anurag needs this:</b> This is the template. Ground-first, data-backed, people-centred. Every journalist doing rural India coverage should start here.</div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-header">
+          <div class="book-spine" style="background: linear-gradient(135deg,#1a1a3a,#2a2a6c);">📖</div>
+          <div class="book-meta">
+            <span class="book-cat cat-pol">Politics</span>
+            <div class="book-title">India's Democracy: An Analysis of Changing State-Society Relations</div>
+            <div class="book-author">Yogendra Yadav</div>
+            <div class="book-year">2010</div>
+          </div>
+        </div>
+        <div class="book-desc">Election analyst Yogendra Yadav's framework for understanding how Indian voters actually behave — far more complex than studio media's caste-math models. Explains why Uttarakhand's anti-incumbency can override demographic arithmetic.</div>
+        <div class="book-relevance"><b>Why Anurag needs this:</b> Intellectual ammo for the "caste math vs. ground anger" debate that studios will push in 2027 election coverage.</div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-header">
+          <div class="book-spine" style="background: linear-gradient(135deg,#3a1a2a,#8c2060);">📖</div>
+          <div class="book-meta">
+            <span class="book-cat cat-him">Himalaya</span>
+            <div class="book-title">The Garwhal Himalaya: People, Land and Culture</div>
+            <div class="book-author">Haridutt Bhatt 'Shailesh'</div>
+            <div class="book-year">Garhwali cultural histories</div>
+          </div>
+        </div>
+        <div class="book-desc">Deep cultural documentation of Garhwali identity — the Jagar tradition, the role of devtas (local deities), the koti-banal architecture that empty villages are destroying. When Anurag films a crumbling wooden doorway, this is the civilisation behind it.</div>
+        <div class="book-relevance"><b>Why Anurag needs this:</b> Makes the ghost village episode not just political tragedy but civilisational loss — a far more powerful frame.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ─── SATIRICAL CLOSING ─── -->
   <div class="closing-card">
     <div class="mic">🎙</div>
-    <h2>चौथा बंदर — Auchak Bhauchak Closing Satire</h2>
+    <h2>चौथा बंदर — Anurag Muskaan's Closing Satire</h2>
     <div class="poem-lines">
       देवभूमि के जंगल जल रहे हैं, और दिल्ली में बैठे हाकिम चैन से सोते हैं,<br>
       पलायन से खाली हो गए ये पहाड़ी गाँव, अब <span>अपनी ही चौखट पर खड़े होकर रोते हैं।</span><br><br>
       भू-कानून की फाइलें मेज़ों पर हैं, पर ज़मीन पर भू-माफिया का डेरा है,<br>
       विकास के नाम पर सुरंगें खोद दीं — <span>बेशर्मी से कहते हैं "नया सवेरा है"!</span><br><br>
       जोशीमठ की दरारें चीख रही हैं, चार-धाम की सड़कों पर जाम है,<br>
-      सिस्टम से सवाल पूछो — जवाब मिलता है: <span>"सब चंगा है, ये डबल इंजन वाला काम है।"</span>
+      सिस्टम से सवाल पूछो — जवाब मिलता है: <span>"सब चंगा है, ये डबल इंजन वाला काम है।"</span><br><br>
+      पर्चा लीक हो गया, पहाड़ी बेटे का सपना जल गया,<br>
+      <span>ये कैसा राम-राज्य है हुज़ूर — जहाँ आम आदमी फाइलों में लटक रहा है?</span>
     </div>
     <div class="sign-off">
       सोचिएगा ज़रूर। <strong>मैं हूँ अनुराग मुस्कान</strong> — ग्राउंड जीरो से... <strong>औचक-भौचक।</strong> नमस्कार! 🙏
@@ -608,9 +1086,11 @@
 
 </div>
 
+<!-- ═══ FOOTER ═════════════════════════════════════════ -->
 <div class="footer">
-  Ground Zero se Auchak Bhauchak | The CarNama Election Series | Uttarakhand 2027 Coverage<br>
-  Independent Digital Journalism — Studio-Free, Ground-First
+  <strong style="color:var(--gold)">Anurag Muskaan</strong> — Ground Zero se Auchak Bhauchak &nbsp;|&nbsp; The CarNama Election Series &nbsp;|&nbsp; Uttarakhand 2027<br>
+  Independent Digital Journalism — Studio-Free, Ground-First &nbsp;|&nbsp; Fact Dossier compiled for field coverage prep<br>
+  <span style="font-size:10px;color:rgba(136,146,164,0.5);">Research powered by DeepAgent AI &nbsp;·&nbsp; Made in India 🇮🇳</span>
 </div>
 
 </body>
